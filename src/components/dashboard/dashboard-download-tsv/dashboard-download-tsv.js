@@ -20,11 +20,11 @@ import compStyles from "./dashboard-download-tsv.module.css";
 function DashboardDownloadTSV() {
 
     const {onHandleDownloadTSV} = useContext(ContextDashboardDownload);
-    const {tableHeadersEntities, workspaces} = useContext(ContextDashboard);
+    const {entities, tableHeadersEntities} = useContext(ContextDashboard);
 
     const onDownloadResults = () => {
 
-        onHandleDownloadTSV(workspaces, tableHeadersEntities);
+        onHandleDownloadTSV(entities, tableHeadersEntities);
     };
 
     return (
